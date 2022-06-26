@@ -1,0 +1,52 @@
+{
+  "name": "clean-arch",
+  "version": "1.0.0",
+  "description": "estudos de clean arch",
+  "main": "./src/index.js",
+  "scripts": {
+    "start:dev": "ts-node-dev --inspect --ignore-watch node_modules --respawn src/infra/http/express/server.ts",
+    "start:express": "tsc -p . && node dist/src/infra/http/express/server.js",
+    "start:hapi": "tsc -p . && node dist/src/infra/http/hapi/server.js",
+    "test": "jest"
+  },
+  "_moduleAliases": {
+    "@adapter": "src/adapter",
+    "@controller": "src/controller",
+    "@infra": "src/infra",
+    "@domain": "src/domain",
+    "@usecases": "src/usecases",
+    "@shared": "src/domain/shared"
+  },
+  "author": "garbim",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2",
+    "express": "^4.18.1",
+    "module-alias": "^2.2.2",
+    "sequelize": "^6.21.1",
+    "sqlite3": "^5.0.8",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.17.12",
+    "@types/express": "^4.17.13",
+    "@types/hapi__hapi": "^20.0.12",
+    "@types/jest": "^28.1.3",
+    "@types/module-alias": "^2.0.1",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.1",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  }
+}
