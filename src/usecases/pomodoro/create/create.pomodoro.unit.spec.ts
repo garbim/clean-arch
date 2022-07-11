@@ -6,6 +6,12 @@ const input = {
   status: "run",
 };
 
+const inputError = {
+  startAt: "abc456",
+  duration: 15,
+  status: "run",
+};
+
 const MockRepository = () => {
   return {
     createPomodoro: jest.fn(),
@@ -28,4 +34,13 @@ describe("Unit Test create pomodoro use case", () => {
       status: input.status,
     });
   });
+
+  /* it("should not create a pomodoro", async () => {
+    const pomodoroRepository = MockRepository();
+    const createPomodoroUseCase = new CreatePomodoroUseCase(pomodoroRepository);
+
+    const output = await createPomodoroUseCase.execute(input);
+
+    expect(output).toEqual(Error);
+  }); */
 });

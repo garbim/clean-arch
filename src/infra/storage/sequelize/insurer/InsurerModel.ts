@@ -2,38 +2,32 @@ import { DataTypes, Model } from "sequelize";
 
 import { database } from "../database";
 
-interface IPomodoroModel {
+interface IInsurerModel {
   code: string;
-  startAt: number;
-  duration: number;
+  name: string;
   status: string;
 }
 
-export class PomodoroModel extends Model<IPomodoroModel> { }
+export class InsurerModel extends Model<IInsurerModel> { }
 
-PomodoroModel.init(
+InsurerModel.init(
   {
     code: {
       type: DataTypes.UUIDV4,
       primaryKey: true,
       allowNull: false,
     },
-    startAt: {
-      type: DataTypes.NUMBER,
-      allowNull: false,
-    },
-    duration: {
-      type: DataTypes.NUMBER,
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     status: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: "run",
     },
   },
   {
     sequelize: database,
-    tableName: "pomodoros",
+    tableName: "insurers",
   }
 );

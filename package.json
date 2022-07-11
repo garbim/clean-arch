@@ -25,7 +25,8 @@
     "module-alias": "^2.2.2",
     "sequelize": "^6.21.1",
     "sqlite3": "^5.0.8",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.17.12",

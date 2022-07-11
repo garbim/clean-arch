@@ -3,7 +3,17 @@ export default class ExpressAdapter {
     return async (req, res) => {
       console.log(req);
       const obj = await fn(req.body);
-      res.json(obj);
+      res.status(201).json(obj);
+    };
+  }
+  static createCustomer(fn) {
+    return async (req, res) => {
+      try {
+        const obj = await fn(req.body);
+        res.status(201).json(obj);
+      } catch (err) {
+        res.status(500).send(err);
+      }
     };
   }
 }

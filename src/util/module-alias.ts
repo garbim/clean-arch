@@ -9,6 +9,5 @@ moduleAlias.addAliases({
   "@controller": path.join(files, "src/controller"),
   "@domain": path.join(files, "src/domain"),
   "@infra": path.join(files, "src/infra"),
-  "@shared": path.join(files, "src/domain/shared"),
   "@usecases": path.join(files, "src/usecases"),
 });

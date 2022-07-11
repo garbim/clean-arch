@@ -5,6 +5,7 @@ export interface IInputFindCustomerDto {
 export interface IOutputFindCustomerDto {
   id: string;
   name: string;
+  doc: string;
   address: {
     street: string;
     city: string;

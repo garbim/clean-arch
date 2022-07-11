@@ -1,5 +1,5 @@
-describe("Test Find customer use case", () => {
-  it("teste inicial", () => {
+describe("Test Find customer usecase", () => {
+  it("Should find customer by id usecase", () => {
     const teste = true;
     expect(teste).toBe(true);
   });

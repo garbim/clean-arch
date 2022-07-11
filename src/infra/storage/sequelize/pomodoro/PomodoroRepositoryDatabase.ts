@@ -19,7 +19,6 @@ export default class PomodoroRepositoryDatabase implements IPomodoroRepository {
   }: Pomodoro): Promise<Pomodoro> {
     const pomodoro = new Pomodoro(code, startAt, duration, status);
     await database.sync();
-    console.log(pomodoro);
     await PomodoroModel.create(pomodoro);
     return pomodoro;
   }

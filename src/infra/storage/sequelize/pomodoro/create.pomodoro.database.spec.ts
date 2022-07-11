@@ -1,4 +1,5 @@
-import CreatePomodoroUseCase from "../../../usecases/pomodoro/create/create.pomodoro.usecase";
+import CreatePomodoroUseCase from "@usecases/pomodoro/create/create.pomodoro.usecase";
+
 import PomodoroRepositoryDatabase from "./PomodoroRepositoryDatabase";
 
 const input = {
